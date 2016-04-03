@@ -3,6 +3,7 @@ package com.number26.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
 
@@ -13,6 +14,7 @@ public class Transaction {
     @NotNull
     private double amount;
     @NotNull
+    @NotEmpty
     private String type;
     @JsonProperty("parent_id")
     private Long parentId;
